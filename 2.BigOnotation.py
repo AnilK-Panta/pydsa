@@ -29,3 +29,39 @@ numbers = [2, 5, 8, 9]
 get_squared_numbers(numbers)
 
 # Output: [4, 25, 64, 81]
+
+
+# ----------------O(1)----------------------
+# a size of array size(arr) with 100 operations takes 0.22 milliseconds
+# a size of array size(arr) with 1000 operations takes 0.23 milliseconds
+
+# Comparing two programs,
+# Time is almost constant, so it is a constant function
+# time taken can be represented as,
+#     time = a + b
+
+# we can represent it in terms of fastest growing term as,
+#     time = a
+
+# by using drop constant we can represent it as,
+#     time = O(1)
+
+# Eg 
+def find_first_pe(price, eps, index):
+    pe=price[index]/eps[index]
+    return print(pe)
+
+find_first_pe([200, 500, 750], [100, 230, 500], 2)
+
+# Output: 1.5
+
+
+# ----------------O(n2)----------------------
+# Eg 
+numbers=[3,6,2,4,3,6,8,9]
+for i in range(len(numbers)):
+    for j in range(i+1, len(numbers)):
+        if numbers[i]==numbers[j]:
+            print(numbers[i])
+            print(" is a dublicate")
+            break
