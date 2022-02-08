@@ -36,3 +36,23 @@ model2=Car("Hyundai", 10)
 
 model1.config()
 model2.config()
+
+
+# comparing objects 
+class Person:
+    def __init__(self):
+        self.name="Anil"
+        self.age=25
+    def Copmpare(self,others):
+        if self.age==others.age:
+            print("Both are of same age")
+        else:
+            print("Both are of different age")
+    def Update(self):
+        self.age=20
+
+    
+men1=Person()
+men2=Person()
+men1.Update()
+men1.Copmpare(men2) #men1 passes as self and men2 passes as others in Compare(self, othere):
